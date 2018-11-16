@@ -1,6 +1,8 @@
 site_name: Charles Forsyth 
 nav:
-- Home: index.md
+- Home: 
+  - "": "index.md"
+  - "CV": "cv.md"
 - High Performance Computing:
   - "HPC on AWS": "hpc-aws.md"
   - Code:
