@@ -3,7 +3,9 @@ nav:
 - Home: index.md
 - High Performance Computing:
   - "HPC on AWS": "hpc-aws.md"
-  - "Code": "Code.md"
+  - Code:
+    - "Code": "Code.md"
+    - "Slurm": "slurm-submission-scripts.md"
   - "Presentations": "presentations.md"
 - Projects:
   - "Project 1": "project1.md"
