@@ -1,6 +1,6 @@
 # Chuck Forsyth
 
-Lead HPC Administrator with experience in architecting, installing, administering and supporting large scale HPC Infrastructures for RD&E operations and Academic Institutions. (Larger Linux Clusters, Thousands of Cores, Lustre, SAN and NAS Storage, Network Licensing and Software support)
+Lead HPC System Administrator with experience in architecting, installing, administering and supporting large scale HPC Infrastructures for RD&E operations and Academic Institutions. 20+ years of Linux System Administration. (Larg Linux Clusters, Thousands of Cores, Lustre, SAN and NAS Storage, Network Licensing and Software support)
 
 
 

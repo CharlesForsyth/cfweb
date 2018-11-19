@@ -1,3 +1,3 @@
 # Chuck Forsyth
 
-Just some of my collections:
+Some of my collections:

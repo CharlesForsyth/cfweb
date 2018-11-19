@@ -1,10 +1,13 @@
 # Slurm 
-Slurm is a resource scheduler for HPC Clusters.
 
-Slurm submission scripts are how you ask for resources on the cluster and what todo with teh those resources once you get them.
+*Slurm* is a resource scheduler for HPC Clusters.
 
-I have a collection of different examples I have used on github.
-[Link](https://github.com/CharlesForsyth/slurm_scripts)
+Slurm submission scripts are how you ask for resources on the cluster and what to do with those resources once you get them.
+
+I have a collection of different examples I have used.
+Its stored on [GitHub - Charles Forsyth](https://github.com/CharlesForsyth/slurm_scripts).
+
+Select examples shown below.
 
 ## Spark Example
 

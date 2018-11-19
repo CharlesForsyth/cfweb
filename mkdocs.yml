@@ -1,15 +1,23 @@
 site_name: Charles Forsyth 
 nav:
-- Home: 
-  - "CV": "cv.md"
-- High Performance Computing:
-  - "HPC on AWS": "hpc-aws.md"
+- Home: "index.md" 
+- CV: "cv.md"
+- High Performance Computing: 
+  - "Intro": "hpc-home.md"
+  - "Linux Basics": "hpc-linux.md"
+  - "Hardware": "hpc-hardware.md"
+  - "Provisioning": "hpc-provisioning.md"
+  - "Architecture": "hpc-architecture.md"
+  - "Schedulers": "hpc-schedulers.md"
+  - "Software": "hpc-software.md"
+  - "Scripts": "hpc-scripts.md"
+  - "HPC in the Cloud": "hpc-aws.md"
+  - "Monitoring": "hpc-monitoring.md"
+  - "Metrics": "hpc-metrics.md"
   - Code:
-    - "Code": "Code.md"
     - "Slurm": "slurm-submission-scripts.md"
+- Docs:
   - "Presentations": "presentations.md"
-- Projects:
-  - "Project 1": "project1.md"
   - "Project 2": "project2.md"
 theme: flatly
 
