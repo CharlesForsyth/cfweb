@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 Linux used as the operating system for most super computers.
 
 ### GNU/Linux Distributions
