@@ -725,6 +725,52 @@ perl -ne 'print if (/my_pattern1/ ? ($c=1) : (--$c > 0)); print if (/my_pattern2
             # For logical OR use this syntax: '/(pattern1|pattern2)/'.
 ```
 
+## SSH
+
+SSH is the main protocal used to communicate with or establish a terminal on remote systems.
+
+#### Example
+
+```bash
+ssh <username>@<remote-address>
+```
+
+If you want to use a specific ssh key for this connection use the `-i` flag.
+
+```bash
+ssh -i ~/.ssh/mykey <username>@<remote-address>
+```
+
+If your username on the remote system is the same as your local username then you can omit the username from the command.
+
+#### Passwordless login.
+
+You can use ssh (RSA) keys to login with out the need for a password. (this is much quicker and very useful)
+
+* Generate your ssh keys `ssh-keygen`
+  * Enter a blank password when asked in order to have a passwordless key
+  * By default the key will be stored as `.ssh/id_rsa`
+    * You can change this path to which ever you like
+* Copy the public key to the remote system (there is now a tool for this)
+  * `ssh-copy-id <username>@<remote-system>`
+  * You can pass the `-i` flag to this command to copy a specific public key.
+* This places your public key into the the file `.ssh/authorized_keys` on the remote system.
+  * You can do this manually if you like.
+
+Once this is complete you can login without a password.
+
+#### SSH remote commands
+
+Often you may want to just run a command on the remote system.
+
+Just put the command or muplitple commands surounded by quotes after the ssh command 
+
+```bash
+ssh <username>@<remote-host> <command-you-want-to-run>
+
+ssh <username>@<remote-host> "<command-you-want-to-run>; <command-you-want-to-run>; <command-you-want-to-run>"
+```
+
 ## Remote Copy: wget, scp, ncftp
 
 #### Wget
