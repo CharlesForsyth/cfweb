@@ -1,5 +1,64 @@
 # HPC Software
 
+### Conda
+
+This is one of the best package managers i have used. It has many uses in an HPC environment.
+
+#### Conda list environments
+
+```bash
+conda env list
+```
+
+#### Conda - create new environment with python 3.7
+
+```bash
+conda create -y -n python3.7 python=3.7
+```
+
+#### Conda - create new environment with python 3.7 and install jupyter.
+
+```bash
+conda create -y -n jupyter python=3.7 jupyter
+```
+
+#### Conda - Delete environment
+
+```bash
+conda env remove -y -n python3.7
+```
+
+#### Conda - Enable conda environment
+
+```bash
+source activate <name-of-environment>
+```
+
+#### Conda - Disable conda environment
+
+```bash
+source deactivate
+```
+
+### Jupyter Notebooks
+
+The [Jupyter Notebook](http://jupyter.org/) is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more. 
+
+This can be installed on your local laptop or workstation.
+
+These can also be used on many HPC Clusters which is exciting because there is often more software there and access to many more cpu and memory.
+
+#### Installing Jupyter Notebooks
+
+If Anaconda is installed then Jupyter is all ready installed.
+
+If just conda is installed than run the following to install Juypter Notebooks.
+
+```bash
+conda create -y -n jupyter python=3.7 jupyter
+source activate jupyter
+```
+
 ### DASK
 
 For the python ecosystem, consider using [Dask](http://dask.pydata.org/en/latest/) which provides advanced parallelism for analytics. [Why use Dask](http://dask.pydata.org/en/latest/why.html) versus (or along with) other options? Dask integrates with Numpy, Pandas, and Scikit-Learn, and it also:
