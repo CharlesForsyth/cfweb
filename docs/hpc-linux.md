@@ -1,7 +1,7 @@
-## Introduction
+# Introduction
 Linux used as the operating system for most super computers.
 
-### GNU/Linux Distributions
+#### GNU/Linux Distributions
 
 * [Ubuntu](https://www.ubuntu.com/) - A beginner-friendly Linux OS based on Debian. A good choice for most people.
 * [OpenSuSE](https://www.opensuse.org/) - An alternative to Ubuntu for new users.
@@ -15,14 +15,14 @@ Linux used as the operating system for most super computers.
 
 ## Basics
 
-### Command-Line Syntax for this Manual
+#### Command-Line Syntax for this Manual
 
 * Remember the UNIX/Linux command line is case sensitive!
 * All commands in this manual are printed in gray code boxes.
 * The hash (pound) sign "#" indicates end of a command and the start of a comment.
 * The notation <...> refers to variables and file names that need to be specified by the user. The symbols < and > need to be excluded.
 
-### Orientation
+#### Orientation
 
 Viewing and changing the present working directory:
 
@@ -61,7 +61,7 @@ whoami            # Shows your user name (same as "echo $USER")
 hostname          # Shows on which machine you are (same as "echo $HOSTNAME")
 ```
 
-### Files and directories
+#### Files and directories
 
 ```bash
 mkdir <dir_name>   # Creates specified directory
@@ -74,7 +74,7 @@ mv <name1> <name2> # Renames directories or files
 mv <name> <path>   # Moves file/directory as specified in path
 ```
 
-### Copy and paste
+#### Copy and paste
 
 The methods differ depending where you are.
 
@@ -109,7 +109,7 @@ The methods differ depending where you are.
   * Paste with mouse only
     * Click the middle mouse button or both left/right buttons simultaneously
 
-### Handy shortcuts
+#### Handy shortcuts
 
 * At the command prompt:
   * up(down)_key                 - scrolls through command history
@@ -130,7 +130,7 @@ The methods differ depending where you are.
   * "." (dot)            - refers to the present working directory
   * "~" (tilde) or "~/"  - refers to user's home directory
 
-### Other Useful Unix Commands
+#### Other Useful Unix Commands
 
 ```bash
 df          # disk space
@@ -145,7 +145,7 @@ du -sh *    # displays disk space usage of individual files/directories
 du -s * | sort -nr # shows disk space used by different directories/files sorted by size
 ```
 
-## Unix Help
+#### Unix Help
 
 ```bash
 help <command>  # Show help for a Bash command
@@ -305,13 +305,13 @@ nice -n <nice_value> <cmd> # Run a program with lower priority. Be nice to other
 renice -n <priority_value> <process-ID> # Changes the priority of an existing process.
 ```
 
-### More on Terminating Processes
+#### More on Terminating Processes
 
 [DigitalOcean - How To Use ps, kill, and nice to Manage Processes in Linux](https://www.digitalocean.com/community/tutorials/how-to-use-ps-kill-and-nice-to-manage-processes-in-linux)
 
 ## Vim Manual
 
-### Basics
+#### Basics
 
 `vim <my_file_name> # open/create file with vim`
 
@@ -335,7 +335,7 @@ q:  # history of commands (from NORMAL MODE!), to reexecute one of them, select 
 :#                  # go to specified line number
 ```
 
-### Vim Help
+#### Vim Help
 
 * **Online Help**
   * Find help on the web. Google will find answers to most questions on **vi** and **vim** (try searching for both terms).
@@ -538,7 +538,7 @@ chsh -l # gives list of shell programs available on your system (does not work o
 <shell_name> # switches to different shell
 ```
 
-### STDIN, STDOUT, STDERR, Redirections, and Wildcards
+#### STDIN, STDOUT, STDERR, Redirections, and Wildcards
 
 See [LINUX HOWTOs](http://www.tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-3.html)
 
@@ -560,7 +560,7 @@ grep my_pattern my_file | wc     # Pipes (|) output of 'grep' into 'wc'
 grep my_pattern my_non_existing_file 2 > my_stderr # prints STDERR to file
 ```
 
-### Useful shell commands
+#### Useful shell commands
 
 ```bash
 cat <file1> <file2> > <cat.out>      # concatenate files in output file 'cat.out'
@@ -602,7 +602,7 @@ Screen references
 1. [Screen Turorial](http://fosswire.com/post/2008/08/video-tutorial-getting-started-with-gnu-screen/)
 2. [Screen Cheat Sheet](http://aperiodic.net/screen/quick_reference)
 
-### Starting a New Screen Session
+#### Starting a New Screen Session
 
 ```bash
 screen                 # Start a new session
@@ -621,7 +621,7 @@ Ctrl-d or type exit # Exit out of the current window. Exiting form the last wind
 Ctrl-a [ # Enters the scrolling mode. Use Page Up and Page Down keys to scroll through the window. Hit the Enter key twice to return to normal mode. 
 ```
 
-### Attaching to Screen Sessions
+#### Attaching to Screen Sessions
 
 From any computer, you can attach to a screen session after SSH-ing into a server.
 
@@ -633,7 +633,7 @@ screen -r <first-few-letters-of-name> # Type just the first few letters of the n
                        # and you will be attached to the session you need
 ```
 
-### Destroying Screen Sessions
+#### Destroying Screen Sessions
 
 1. Terminate all programs that are running in the screen session. The standard way to do that is: `Ctrl-c`
 2. Exit out of your shell: `exit`
@@ -641,7 +641,7 @@ screen -r <first-few-letters-of-name> # Type just the first few letters of the n
 
 There may be programs running in different windows of the same screen session. That's why you may need to terminate programs and exit shells multiple time.
 
-### Tabs and a Reasonably Large History Buffer
+#### Tabs and a Reasonably Large History Buffer
 
 For a better experience with screen, run
 
@@ -727,7 +727,7 @@ perl -ne 'print if (/my_pattern1/ ? ($c=1) : (--$c > 0)); print if (/my_pattern2
 
 ## Remote Copy: wget, scp, ncftp
 
-### Wget
+#### Wget
 
 Use wget to download a file from the web:
 
@@ -735,7 +735,7 @@ Use wget to download a file from the web:
 wget ftp://ftp.ncbi.nih.... # file download from www; add option '-r' to download entire directories
 ```
 
-### SCP
+#### SCP
 
 Use scp to copy files between machines (ie. laptop to server):
 
@@ -757,7 +757,7 @@ scp -r user@remote_host:directory/ ~/dir
                                  # Copies entire directory from server to local machine.
 ```
 
-### Nice FTP
+#### Nice FTP
 
 From the linux command line run ncftp and use it to get files:
 
@@ -771,7 +771,7 @@ ncftp> bye
 
 ## Archiving and Compressing
 
-### Creating Archives
+#### Creating Archives
 
 ```bash
 tar -cvf my_file.tar mydir/    # Builds tar archive of files or directories. For directories, execute command in parent directory. Don't use absolute path.    
@@ -781,14 +781,14 @@ zip -r mydir.zip mydir/        # Command to archive a directory (here mydir) wit
 tar -jcvf mydir.tar.bz2 mydir/ # Creates *.tar.bz2 archive
 ```
 
-### Viewing Archives
+#### Viewing Archives
 
 ```bash
 tar -tvf my_file.tar
 tar -tzvf my_file.tgz
 ```
 
-### Extracting Archives
+#### Extracting Archives
 
 ```bash
 tar -xvf my_file.tar
