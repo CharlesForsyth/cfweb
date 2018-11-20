@@ -1,7 +1,5 @@
 # HPC Hardware
 
-Test
-
 * Switches
 * Cables
 * Storage
@@ -24,40 +22,36 @@ Test
 
 ## Cables
 
-* Ethernet
-  + Copper
-    - CAT 5/6
-  + Fiber
-    - Single
-    - Multi-Mode
-
-* Infiniband
-  * QDR
-  * FDR
-  * EDR
-  * Copper
-  * Fiber
-
-* Power
-  * Node to Wall
-  * Node to Rack
-  * Rack to PDU
-  * PDU to UPS
+- Ethernet
+    - Copper
+        - CAT 5/6
+    - Fiber
+    	- Single
+    	- Multi-Mode
+- Infiniband
+    - QDR
+    - FDR
+    - EDR
+    - Copper
+    - Fiber
+- Power
+    - Node to Wall
+    - Node to Rack
+    - Rack to PDU
+    - PDU to UPS
 
 ## Storage
 
 * Disks
-  * HDD
-    * Size and Speed
-  * SSD
-    * Size, Speed and Useable number of Writes
-
+    * HDD
+        * Size and Speed
+    * SSD
+        * Size, Speed and Useable number of Writes
 * Disk Shelves
-  * Controllers
-  * JBODS
-
+    * Controllers
+    * JBODS
 * Tape
-  * Cold Storage
+    * Cold Storage
 
 ## Nodes
 
@@ -74,4 +68,4 @@ Test
 ## Cooling
 
 * Server Room HVAC
-  * Libert CRAC units
+    * Libert CRAC units
