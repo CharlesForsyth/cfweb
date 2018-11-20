@@ -1,4 +1,7 @@
 # Introduction
+
+*Much of this page was copied directly from the [HPCC](http://hpcc.ucr.edu/) Linux manual page.
+
 Linux used as the operating system for most super computers.
 
 #### GNU/Linux Distributions
