@@ -56,8 +56,8 @@
 ## Nodes
 
 * Hypervisor
-* Compute
-* Storage
+    * Compute
+        * Storage
 * Special
 
 ## Power

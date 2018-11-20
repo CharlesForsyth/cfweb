@@ -115,23 +115,23 @@ The methods differ depending where you are.
 #### Handy shortcuts
 
 * At the command prompt:
-  * up(down)_key                 - scrolls through command history
-  * `history   # shows all commands you have used recently`
+    * up(down)_key                 - scrolls through command history
+    * `history` shows all commands you have used recently
 * Auto Completion:
-  * <something-incomplete> TAB   - completes program_path/file_name
-* Taking control over the cursor (the pointer on the command line):
-* 
+    * <something-incomplete> TAB   - completes program_path/file_name
+    * Taking control over the cursor (the pointer on the command line):
 
-> ```bash
-> Ctrl+a    # Cursor to beginning of command line
-> Ctrl+e    # Cursor to end of command line
-> Ctrl+w    # Cut last word
-> Ctrl+k    # Cut to the end of the line
-> Ctrl+y    # Paste ("yank") content that was cut earlier (by Ctrl-w or Ctrl-k)
-> ```
+```bash
+Ctrl+a    # Cursor to beginning of command line
+Ctrl+e    # Cursor to end of command line
+Ctrl+w    # Cut last word
+Ctrl+k    # Cut to the end of the line
+Ctrl+y    # Paste ("yank") content that was cut earlier (by Ctrl-w or Ctrl-k)
+```
+
 * When specifying file names:
-  * "." (dot)            - refers to the present working directory
-  * "~" (tilde) or "~/"  - refers to user's home directory
+  * `.` (dot)            - refers to the present working directory
+  * `~` (tilde) or `~/`  - refers to user's home directory
 
 #### Other Useful Unix Commands
 
