@@ -25,11 +25,11 @@ Test
 ## Cables
 
 * Ethernet
-  * Copper
-    * CAT 5/6
-  * Fiber
-    * Single
-    * Multi-Mode
+  + Copper
+    - CAT 5/6
+  + Fiber
+    - Single
+    - Multi-Mode
 
 * Infiniband
   * QDR
