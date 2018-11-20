@@ -15,7 +15,18 @@ Including:
 
 #### Ethernet
 
+##### 1G
+##### 10G
+
 #### Infiniband
+
+* QDR
+* FDR
+* EDR
+
+##### Director Switch
+
+##### Satellite
 
 ## Cables
 
@@ -25,15 +36,39 @@ Including:
 
 #### Ethernet
 
+* Copper
+  * CAT 5/6
+* Fiber
+  * Single
+  * Multi-Mode
+
 #### Infiniband
 
+* QDR
+* FDR
+* EDR
+* Copper
+* Fiber
+
 #### Power
+
+* Node to Wall
+* Node to Rack
+* Rack to PDU
+* PDU to UPS
 
 ## Storage
 
 * Disks
+  * HDD
+    * Size and Speed
+  * SSD
+    * Size, Speed and Useable number of Writes
 * Disk Shelves
+  * Controllers
+  * JBODS
 * Tape
+  * Cold Storage
 
 #### Disks
 
