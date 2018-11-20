@@ -1,6 +1,5 @@
 # HPC Hardware
 
-Including:
 * Switches
 * Cables
 * Storage
@@ -13,49 +12,33 @@ Including:
 * Ethernet
 * Infiniband
 
-#### Ethernet
-
-##### 1G
-##### 10G
-
 #### Infiniband
 
 * QDR
 * FDR
 * EDR
-
-##### Director Switch
-
-##### Satellite
+* Director Switch
+* Satellite Switches
 
 ## Cables
 
 * Ethernet
+  * Copper
+    * CAT 5/6
+  * Fiber
+    * Single
+    * Multi-Mode
 * Infiniband
+  * QDR
+  * FDR
+  * EDR
+  * Copper
+  * Fiber
 * Power
-
-#### Ethernet
-
-* Copper
-  * CAT 5/6
-* Fiber
-  * Single
-  * Multi-Mode
-
-#### Infiniband
-
-* QDR
-* FDR
-* EDR
-* Copper
-* Fiber
-
-#### Power
-
-* Node to Wall
-* Node to Rack
-* Rack to PDU
-* PDU to UPS
+  * Node to Wall
+  * Node to Rack
+  * Rack to PDU
+  * PDU to UPS
 
 ## Storage
 
@@ -70,41 +53,19 @@ Including:
 * Tape
   * Cold Storage
 
-#### Disks
-
-#### Disk Shelves
-
-#### Tape
-
 ## Nodes
 
-Types:
 * Hypervisor
 * Compute
 * Storage
 * Special
-
-#### Hypervisor
-
-#### Compute
-
-#### Storage
-
-#### Special
 
 ## Power
 
 * Rack Power
 * Server Room Power
 
-#### Rack Power
-
-#### Server Room Power
-
 ## Cooling
 
 * Server Room HVAC
-
-#### Server Room HVAC
-
-##### Libert CRAC units
+  * Libert CRAC units
