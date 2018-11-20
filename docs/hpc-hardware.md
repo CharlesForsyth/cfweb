@@ -28,12 +28,14 @@
   * Fiber
     * Single
     * Multi-Mode
+
 * Infiniband
   * QDR
   * FDR
   * EDR
   * Copper
   * Fiber
+
 * Power
   * Node to Wall
   * Node to Rack
@@ -47,9 +49,11 @@
     * Size and Speed
   * SSD
     * Size, Speed and Useable number of Writes
+
 * Disk Shelves
   * Controllers
   * JBODS
+
 * Tape
   * Cold Storage
 
