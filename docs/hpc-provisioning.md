@@ -41,3 +41,6 @@ Definition:
         - kvm/libvirt
         - VmWare
         - MS HyperV
+
+gcp
+GCP
