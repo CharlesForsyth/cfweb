@@ -28,7 +28,7 @@ Definition:
 - Users
     - LDAP
     - Kerberos
-    - NIS
+    - [NIS](https://en.wikipedia.org/wiki/Network_Information_Service)
     - Local Accounts
 - Virtual Machines
     - Cloud
