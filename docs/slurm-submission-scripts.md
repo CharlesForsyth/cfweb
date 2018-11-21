@@ -11,6 +11,15 @@ Select examples shown below.
 
 ## Spark Example
 
+This example very specific to the HPCC Cluster at UCR. It does the following:
+
+- Creates a [spark](https://spark.apache.org/) cluster on nodes allocated from slurm on the HPCC Cluster
+- Spawns the spark master on the first node
+- Spawns spark workers on the rest of the nodes
+- Counts words in a text file of moby dick across all nodes.
+
+*[Other examples from the spark website](https://spark.apache.org/examples.html)* 
+
 ###### [spark_job.slurm](https://raw.githubusercontent.com/CharlesForsyth/slurm_scripts/master/spark_job.sh)
 
 ```bash
@@ -21,12 +30,7 @@ Select examples shown below.
 #SBATCH --cpus-per-task=8
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=0:20:00
-#SBATCH --job-name=spark-test
-
-##########################################################
-# PBS version was pulled from here:                      #
-#   https://www.dursi.ca/post/spark-in-hpc-clusters.html #
-##########################################################
+#SBATCH --job-name=spark-example
 
 nodes=($( scontrol show hostnames $SLURM_NODELIST ))
 nnodes=${#nodes[@]}
