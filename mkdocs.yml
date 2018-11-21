@@ -14,8 +14,7 @@ nav:
   - "HPC in the Cloud": "hpc-aws.md"
   - "Monitoring": "hpc-monitoring.md"
   - "Metrics": "hpc-metrics.md"
-  - Code:
-    - "Slurm": "slurm-submission-scripts.md"
+  - "Code": "hpc-code.md"
 - Docs:
   - "Presentations": "presentations.md"
   - "Project 2": "project2.md"
