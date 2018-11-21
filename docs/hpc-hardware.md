@@ -11,14 +11,14 @@
 
 * Ethernet
 * Infiniband
-
-#### Infiniband
-
-* QDR
-* FDR
-* EDR
-* Director Switch
-* Satellite Switches
+    * QDR
+    * FDR
+    * EDR
+    * Director Switch
+    * Satellite Switches
+* FiberChannel
+    * HBAs
+    * 16G
 
 ## Cables
 
@@ -34,6 +34,10 @@
     - EDR
     - Copper
     - Fiber
+- FiberChannel
+    - Fiber
+- SAS
+    - Direct Connect SAS
 - Power
     - Node to Wall
     - Node to Rack
@@ -56,8 +60,8 @@
 ## Nodes
 
 * Hypervisor
-    * Compute
-        * Storage
+* Compute
+* Storage
 * Special
 
 ## Power
