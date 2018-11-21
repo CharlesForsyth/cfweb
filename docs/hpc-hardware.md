@@ -139,46 +139,46 @@
 
         * Check memory on the node
 
-            * `cat /proc/meminfo | head -3` 
+            `cat /proc/meminfo | head -3` 
 
-                ```bash
-                i22:~# cat /proc/meminfo | head -3
-                MemTotal:       528079828 kB
-                MemFree:        495977976 kB
-                MemAvailable:   502751960 kB
-                ```
+            ```bash
+            i22:~# cat /proc/meminfo | head -3
+            MemTotal:       528079828 kB
+            MemFree:        495977976 kB
+            MemAvailable:   502751960 kB
+            ```
 
-            * `free -g` 
+            `free -g` 
 
-                ```bash
-                i22:~# free -g
-                              total        used        free      shared  buff/cache   available
-                Mem:            503          31         461           1          10         467
-                Swap:             3           0           3
-                
-                ```
+            ```bash
+            i22:~# free -g
+                          total        used        free      shared  buff/cache   available
+            Mem:            503          31         461           1          10         467
+            Swap:             3           0           3
+            
+            ```
 
-            * smem
+            smem
 
-                * smem  reports physical memory usage, taking shared memory pages into account.  Unshared memory is reported as the USS (Unique Set Size).  Shared memory is divided evenly among the processes sharing that memory.  The unshared memory (USS) plus a process's proportion of shared memory is reported as the PSS  (Proportional  Set Size).  The USS and PSS only include physical memory usage.  They do not include memory that has been swapped out to disk. Memory can be reported by process, by user, by mapping, or system wide.  Both text mode and graphical output are available.
+            * smem  reports physical memory usage, taking shared memory pages into account.  Unshared memory is reported as the USS (Unique Set Size).  Shared memory is divided evenly among the processes sharing that memory.  The unshared memory (USS) plus a process's proportion of shared memory is reported as the PSS  (Proportional  Set Size).  The USS and PSS only include physical memory usage.  They do not include memory that has been swapped out to disk. Memory can be reported by process, by user, by mapping, or system wide.  Both text mode and graphical output are available.
 
-                * Example
+            * Example
 
-                    * `smem -w`  
+                * `smem -w`  
 
-                        ```bash
-                        i22:~# smem -w
-                        Area                           Used      Cache   Noncache 
-                        firmware/hardware                 0          0          0 
-                        kernel image                      0          0          0 
-                        kernel dynamic memory      14962228    7805104    7157124 
-                        userspace memory           17016380    1589884   15426496 
-                        free memory               496101220  496101220          0 
-                        ```
+                * ```bash
+                    i22:~# smem -w
+                    Area                           Used      Cache   Noncache 
+                    firmware/hardware                 0          0          0 
+                    kernel image                      0          0          0 
+                    kernel dynamic memory      14962228    7805104    7157124 
+                    userspace memory           17016380    1589884   15426496 
+                    free memory               496101220  496101220          0 
+                    ```
 
-                    * [other examples](https://www.techrepublic.com/article/how-to-install-and-use-the-smem-memory-reporting-tool-in-linux/)
+                * [other examples](https://www.techrepublic.com/article/how-to-install-and-use-the-smem-memory-reporting-tool-in-linux/)
 
-                * 
+            * 
 
         * 128G Min.
 
