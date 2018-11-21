@@ -10,11 +10,10 @@ nav:
   - "Architecture": "hpc-architecture.md"
   - "Schedulers": "hpc-schedulers.md"
   - "Software": "hpc-software.md"
-  - "Scripts": "hpc-scripts.md"
+  - "Code": "hpc-code.md"
   - "HPC in the Cloud": "hpc-aws.md"
   - "Monitoring": "hpc-monitoring.md"
   - "Metrics": "hpc-metrics.md"
-  - "Code": "hpc-code.md"
 - Docs:
   - "Presentations": "presentations.md"
   - "Project 2": "project2.md"
