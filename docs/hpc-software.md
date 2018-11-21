@@ -167,6 +167,33 @@ int main(int argc, char *argv[])
 }
 ```
 
+hellompi.c
+
+`mpicc hellompi.c -I/opt/linux/centos/7.x/x86_64/pkgs/openmpi/2.0.1-slurm-16.05.4/include -pthread -o hellompi`
+
+```c++
+#include <stdio.h>
+#include <mpi.h>
+#include <unistd.h>
+
+
+int main (argc, argv)
+int argc;
+char *argv[];
+{
+int rank, size;
+char hostname[1024];
+
+MPI_Init (&argc, &argv); /* starts MPI */
+MPI_Comm_rank (MPI_COMM_WORLD, &rank); /* get current process id */
+MPI_Comm_size (MPI_COMM_WORLD, &size); /* get number of processes */
+gethostname(hostname, 1024);
+printf( "Hello world from process %d of %d on Node %s\n", rank, size, hostname );
+MPI_Finalize();
+return 0;
+}
+```
+
 
 
 ## Fortran
