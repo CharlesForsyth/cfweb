@@ -47,6 +47,8 @@ int main(int argc, char *argv[]) {
 
 ###### hola.c
 
+`mpic++ -fopenmp hola.c` used to complie
+
 ```c++
 #include <stdio.h>
 #include <omp.h>
