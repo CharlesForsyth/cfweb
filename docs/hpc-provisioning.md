@@ -42,5 +42,3 @@ Definition:
         - VmWare
         - MS HyperV
 
-gcp
-GCP
