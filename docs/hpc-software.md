@@ -45,6 +45,58 @@ int main(int argc, char *argv[]) {
 }
 ```
 
+###### hola.c
+
+```c++
+#include <stdio.h>
+#include <omp.h>
+int main (int argc, char *argv[ ]) {
+int id, nthreads;
+
+#pragma omp parallel private(id)
+{
+  id = omp_get_thread_num();
+  printf("hola from %d\n", id);
+  #pragma omp barrier
+  if ( id == 0 ) {
+      nthreads = omp_get_num_threads();
+      printf("%d threads said hola!\n",nthreads);
+  }
+}
+return 0;
+}
+```
+
+###### loops.c
+
+```c++
+#include <stdio.h>
+#include <omp.h>
+#define N 100
+int main(void)
+{
+float a[N], b[N], c[N];
+int i, id;
+omp_set_dynamic(0); // ensures use of all available threads
+omp_set_num_threads(20); // sets number of all available threads to 20
+/* Initialize arrays a and b. */
+for (i = 0; i < N; i++) {
+   a[i] = i * 1.0;
+   b[i] = i * 2.0;
+}
+/* Compute values of array c in parallel. */
+#pragma omp parallel shared(a, b, c) private(i)
+{
+#pragma omp for 
+   for (i = 0; i < N; i++)
+       c[i] = a[i] + b[i];
+       id = omp_get_thread_num();
+       printf ("Thread %d working\n", id);
+   }
+printf ("%f\n", c[10]);
+}
+```
+
 
 
 ## Fortran
@@ -72,7 +124,39 @@ int main(int argc, char *argv[]) {
 	end
 ```
 
+###### reduction.f90
 
+```fortran
+PROGRAM REDUCTION 
+IMPLICIT NONE
+INTEGER nthread, OMP_GET_THREAD_NUM
+INTEGER I,J,K
+
+I=0
+J=0
+K=0
+PRINT *, "Before parallel section: I=",I," J=", J," K=",K
+PRINT *, ""
+
+!$OMP PARALLEL DEFAULT(PRIVATE) REDUCTION(+:I)&
+!$OMP REDUCTION(*:J) REDUCTION(MAX:K)
+
+nthread=OMP_GET_THREAD_NUM()
+
+I = nthread
+J = nthread
+K = nthread
+
+PRINT *, "Thread ",nthread," I=",I," J=", J," K=",K
+
+!$OMP END PARALLEL
+
+PRINT *, ""
+Print *, "Reduction Operators used + * MAX"
+PRINT *, "After parallel section:  I=",I," J=", J," K=",K
+
+END PROGRAM REDUCTION 
+```
 
 ## Python
 
