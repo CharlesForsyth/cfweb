@@ -1,5 +1,81 @@
 # HPC Software
 
+
+
+## System Packages
+
+## C / C++ / C#
+
+### Open MP
+
+###### atomic.c
+
+```c++
+#include <stdio.h>
+#include <omp.h>
+
+int main(void) {
+  int count = 0;
+  int id; 
+#pragma omp parallel shared(count)
+  {
+ #pragma omp atomic
+      count++;
+      id = omp_get_thread_num();
+      printf("Count is %d  on thread %d\n",count,id);
+  }
+  printf("Number of threads: %d\n",count);
+}
+```
+
+###### simple-parallel.c
+
+```c++
+int main(int argc, char *argv[]) {
+    const int N = 10;
+    int i, a[N], myid;
+ 
+    #pragma omp parallel for 
+    for (i = 0; i < N; i++){
+        a[i] = 2 * i;
+    myid = omp_get_thread_num();
+    printf("my thread %d , i is %d and a[i] is %d \n",myid,i, a[i]);
+}
+   return 0;
+}
+```
+
+
+
+## Fortran
+
+###### workshare.f90
+
+```fortran
+        program worksharef90
+        use omp_lib
+        integer:: a(1:10),b(1:10),c(1:10) 
+        integer:: n,i
+        n=10
+
+!$OMP PARALLEL SHARED(n,a,b,c)
+!$OMP WORKSHARE
+        b(1:n)=b(1:n)+1
+        c(1:n)=c(1:n)+2
+        a(1:n)=b(1:n)+c(1:n)
+!$OMP END WORKSHARE
+!$OMP END PARALLEL
+        do i =1, n
+        write(6,*)i, a(i)
+        enddo
+
+	end
+```
+
+
+
+## Python
+
 ### Conda
 
 This is one of the best package managers i have used. It has many uses in an HPC environment.
