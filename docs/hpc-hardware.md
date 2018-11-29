@@ -51,9 +51,122 @@
         * Size and Speed
     * SSD
         * Size, Speed and Useable number of Writes
-* Disk Shelves
-    * Controllers
-    * JBODS
+
+#### Disk Shelves
+
+##### Controllers
+
+##### ARI Systems
+
+These are storage shelves sold by RAID Inc. in which are rebranded I'm sure. I have used HP MSA 2000's and they seems to be the same thing right down to the web interface. The command line is the same also.
+
+###### Show Versions
+
+- ssh to the controller *manage* is the default username
+- `ssh manage@<controller ip or hostname>`
+
+```bash
+# show versions
+Controller A Versions
+---------------------
+Bundle Version: GL222R061
+Build Date: Tue May 29 14:57:00 MDT 2018
+
+Controller B Versions
+---------------------
+Bundle Version: GL222R061
+Build Date: Tue May 29 14:57:00 MDT 2018
+
+Success: Command completed successfully. (2018-11-29 22:50:53)
+```
+
+###### Upgrade Firmware on ARI System backing GPFS 
+
+```bash
+
+- Download firmware from RAID ftp site
+        ftp://files.raidinc.com/u-california-riverside/fromRAID
+                GL222R061-RaidInc.bin
+                GL222R061-RaidInc.md5
+
+- Shutdown IO to cluster
+
+- Unmount all file systems to all nodes
+        # mmumount all -a
+        # mmlsmount all -a
+
+- Shutdown GPFS on all nodes
+        # mmshutdown -a
+        # mmgetstate -a
+
+-Get ARI logs before upgrade
+        FTP to storage controller to get logs from
+        # ftp manage@<storge controller IP>
+                password !manage
+        #       get logs <name of file>.zip     
+
+- Upgrade firmware on controllers from CLI
+    SSH to one of the controller IP addresses: ssh <ip address of controller A or B>
+        Username: manage
+        Password: !manage
+
+        Run the following command to enable partner firmware upgrade:
+        NOTE: This will allow the firmware to automatically both controllers. 
+        using FTP. To exit the telnet session type exit.
+        # set advanced-settings partner-firmware-upgrade enabled
+                # exit
+
+        Run the following command to flash the firmware to controller A or B:
+        ftp <ip address of controller A or B>
+                Username: manage
+                Password: !manage
+                # put <firmware file.bin> flash 
+        NOTE: Once the firmware is finished flashing on a controller, the controller will automatically reboot.
+        NOTE: When the first controller is down rebooting the 2nc controller will automatically upgrade and reboot
+        Please wait for both controller to flash and reboot.
+        Verify new firmware is loaded on both controllers
+                # show versions
+                Controller A Versions
+        ---------------------
+        Bundle Version: GL222R061-xx
+        Build Date: xxxxxxxxxxxxxxxxxxx
+        Controller B Versions
+        ---------------------
+        Bundle Version: GL222R061-xx
+        Build Date: xxxxxxxxxxxxxxxxxxx
+
+- Get ARI logs after upgrade
+        FTP to storage controller to get logs from
+        # ftp manage@<storge controller IP>
+                password !manage
+        #       get logs <name of file>.zip     
+
+- Rebalance vdisks on controllers from CLI
+    Telnet to one of the controller IP addresses: telnet <ip address of controller A or B>
+        Username: manage
+        Password: !manage
+        # show vdisks
+        # set vdisk owner b vdisk10       to move the controller owner for vdisk10
+        # show vdisks
+
+- Restart GPFS
+        # mmstartup -a
+        # mmgetstate -a
+
+- Remount GPFS
+        # mmmount all -a
+        # mmlsmount all -a
+
+- Restart IO to cluster
+
+```
+
+##### JBODS
+
+Curretly Supporting ARI JBODS attached to the ARI Storage controller.
+
+Connected with 2 x 12G SAS cables.
+
 * Tape
     * Cold Storage
 
